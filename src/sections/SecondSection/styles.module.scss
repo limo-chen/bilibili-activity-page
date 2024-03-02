@@ -5,10 +5,25 @@
     justify-content: space-around;
     height: 56px;
     li {
-      // 去掉样式
+      position: relative;
       list-style: none;
-
       color: #fff;
+      .line {
+        position: absolute;
+        top: 26px;
+        left: 0px;
+        bottom: -9px;
+        // transform: translateY(-50%);
+        width: 100%;
+        height: 3px;
+        background: yellow;
+        opacity: 0;
+        // 原来的样式中加上过渡效果
+        transition: opacity 0.3s;
+        &.visible {
+          opacity: 1;
+        }
+      }
     }
   }
   section {
