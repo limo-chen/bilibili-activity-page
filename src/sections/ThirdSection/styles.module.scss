@@ -1,0 +1,9 @@
+.ThirdSection {
+  img {
+    width: 100%;
+    &.commit {
+      padding: 16px;
+      border-radius: 25px;
+    }
+  }
+}
