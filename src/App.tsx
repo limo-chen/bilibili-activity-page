@@ -7,6 +7,7 @@ function App() {
   return (
     <div className={styles.app}>
       <FirstSection />
+
       <SecondSection />
       <ThirdSection />
     </div>

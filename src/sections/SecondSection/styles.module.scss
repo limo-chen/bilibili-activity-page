@@ -1,9 +1,19 @@
 .secondSection {
+  position: relative;
+  padding-top: 56px;
+
   ul {
+    position: absolute;
+    top: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 56px;
+    background: #ce7446;
+    &.isFixed {
+      position: fixed;
+    }
     li {
       position: relative;
       list-style: none;
@@ -27,6 +37,7 @@
     }
   }
   section {
+    scroll-margin: 56px;
     padding: 16px;
     h2 {
       font-size: 1rem;
@@ -36,6 +47,42 @@
       margin-top: 16px;
       border-radius: 6px;
       width: 100%;
+    }
+  }
+
+  //App内打开
+  .btnWrapper {
+    position: fixed;
+    bottom: 0;
+    height: 64px;
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 66%
+    );
+    opacity: 0;
+    transform: translateY(64px);
+
+    transition: opacity 0.3s, transform 0.3s;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    img {
+      width: 100px;
+    }
+    button {
+      border: none;
+      padding: 8px 16px;
+      border-radius: 50px;
+      color: #fff;
+      background: #fb7299;
     }
   }
 }
